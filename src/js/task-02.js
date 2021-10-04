@@ -9,10 +9,13 @@ const ingredients = [
 
 const ulEl = document.querySelector("#ingredients");
 
-const newEl = ingredients.map(ingredient => {
-  const liEl = document.createElement("li");
-  liEl.classList.add("item");
-  liEl.textContent=ingredient;
-  return liEl;
+const createLiArrayElements = (array => {
+  return ingredients.map(ingredient => {
+    const liEl = document.createElement("li");
+    liEl.classList.add("item");
+    liEl.textContent=ingredient;
+    return liEl;
+  })
 })
-ulEl.append(...newEl)
+createLiArrayElements(ingredients);
+ulEl.append(...createLiArrayElements(ingredients));
