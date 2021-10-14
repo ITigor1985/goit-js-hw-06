@@ -13,8 +13,20 @@ const ingredients = [
 
 // const pEl = document.querySelector("p");
 // pEl.after(headerEl);
+
+// const nameIngredients = ingredients
+//   .map((ingredient) => `<li class="item">${ingredient}</li>`)
+//   .join("");
+
+// const list = document.querySelector("#ingredients");
+// list.insertAdjacentHTML("beforeend", nameIngredients);
+
 const nameIngredients = ingredients.map((ingredient) => {
   const liEl = document.createElement("li");
+  liEl.classList.add("item");
   liEl.textContent = ingredient;
+  return liEl;
 });
-console.log(nameIngredients);
+console.log(...nameIngredients);
+const list = document.querySelector("#ingredients");
+list.append(...nameIngredients);
