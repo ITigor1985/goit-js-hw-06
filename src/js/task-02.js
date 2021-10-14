@@ -6,6 +6,7 @@ const ingredients = [
   "Herbs",
   "Condiments",
 ];
+
 // const headerEl = document.createElement("h1");
 // headerEl.textContent = "This is a heading";
 // console.log(headerEl);
