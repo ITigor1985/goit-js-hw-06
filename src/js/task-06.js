@@ -9,7 +9,7 @@ const checkingСlass = () => {
 
 const validate = (event) => {
   console.log(event.currentTarget.value.length);
-  if (textInput.dataset.length <= event.currentTarget.value.length) {
+  if (parseInt(textInput.dataset.length) === event.currentTarget.value.length) {
     textInput.classList.add("valid");
   } else {
     textInput.classList.add("invalid");
