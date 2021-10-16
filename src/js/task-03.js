@@ -16,7 +16,7 @@ const images = [
 const list = document.querySelector(".gallery");
 list.style.display = "flex";
 list.style.listStyleType = "none";
-const createElement = (elem) =>
-  `<li style="margin-right:20px"><img src=${elem.url} style="max-width: 100%; display: block" alt=${elem.alt}></li>`;
+const createElement = (event) =>
+  `<li style="margin-right:20px"><img src=${event.url} style="max-width: 100%; display: block" alt=${event.alt}></li>`;
 const listItem = images.map((image) => createElement(image)).join("");
 list.insertAdjacentHTML("beforeend", listItem);
