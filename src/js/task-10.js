@@ -12,12 +12,10 @@ const createBoxes = (event) => {
   let box = [];
   let count = 0;
 
-  console.log(quantityBox);
   for (let i = 0; i < quantityBox; i++, count += 10) {
     let startWidth = 30;
     let startHeight = 30;
     let bgColor = getRandomHexColor();
-    console.log(bgColor);
     const divElement = document.createElement("div");
     divElement.style.width = `${startWidth + count}px`;
     divElement.style.height = `${startHeight + count}px`;
